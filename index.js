@@ -7,7 +7,7 @@ module.exports = class NotRealScience extends Plugin {
       (function (open) {
         window.XMLHttpRequest.prototype.open = function (a, url, b, c, d) {
           if (url.toString().includes('/science' || '/track')) {
-            return open.apply(this, false);
+            return open.apply(this, null);
           }
           return open.apply(this, arguments);
         };
